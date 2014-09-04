@@ -6,8 +6,8 @@ build_environment: Ubuntu 12.04
 # language setting
 language: java
 
-services:
-   - mongodb
+#services:
+#   - mongodb
 
 # only build when certain Git branches are updated
 branches:
@@ -16,8 +16,11 @@ branches:
 
 # Running the tests with grunt
 # script file
-script: grailsw
-
+script: ./grailsw war
+script:
+ - ./minions/grailsw clean
+ - ./minions/grailsw compile
+ - ./minions/grailsw war
 
 after_archive:
   # To get the URL of the api access token
