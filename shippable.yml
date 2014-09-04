@@ -16,9 +16,8 @@ branches:
 
 # Running the tests with grunt
 # script file
-script: ./grailsw war
 script:
- - ./minions/grailsw clean
+ - ./grailsw clean
  - ./minions/grailsw compile
  - ./minions/grailsw war
 
