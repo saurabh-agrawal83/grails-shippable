@@ -23,7 +23,7 @@ script:
 
 before_archive:
   - ls
-  - mv  target/grails-shippable-0.1.war  shippable/src
+  - mv  target/grails-shippable-0.1.war  shippable/grails-shippable-0.1.war
 
 after_archive:
   # To get the URL of the api access token
