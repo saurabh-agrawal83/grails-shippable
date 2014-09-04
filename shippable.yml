@@ -18,8 +18,8 @@ branches:
 # script file
 script:
  - ./grailsw clean
- - ./minions/grailsw compile
- - ./minions/grailsw war
+ - ./grailsw compile
+ - ./grailsw war
 
 after_archive:
   # To get the URL of the api access token
