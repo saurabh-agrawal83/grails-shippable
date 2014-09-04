@@ -21,9 +21,9 @@ script:
  - ./grailsw compile
  - ./grailsw war
 
- before_archive:
-      - ls
-      - mv  target/grails-shippable-0.1.war  shippable/src
+before_archive:
+  - ls
+  - mv  target/grails-shippable-0.1.war  shippable/src
 
 after_archive:
   # To get the URL of the api access token
