@@ -1,0 +1,26 @@
+#reset_minion: true
+
+# Build Environment
+build_environment: Ubuntu 12.04
+
+# language setting
+language: java
+
+services:
+   - mongodb
+
+# only build when certain Git branches are updated
+branches:
+  only:
+    - master
+
+# Running the tests with grunt
+# script file
+script: grailsw
+
+
+after_archive:
+  # To get the URL of the api access token
+    - echo $SHIPPABLE_ARTIFACTS_URL
+  # value of the below variable will be true if archive is successful else it will be false.
+    - echo $ARTIFACTS_UPLOAD_SUCCESSFUL
